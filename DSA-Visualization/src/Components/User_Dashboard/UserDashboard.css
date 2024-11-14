@@ -1,0 +1,11 @@
+.dashboard {
+    height: 100vh;
+    width: 100%;
+    display: flex; /* Use flexbox for layout */
+  }
+  
+  .right-side {
+    width: 70%;
+    padding: 15px; /* Optional: Add padding */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }

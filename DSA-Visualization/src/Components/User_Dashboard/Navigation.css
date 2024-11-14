@@ -1,0 +1,79 @@
+.First-navbar{
+    max-width: 100%;
+    background-color: white;
+   
+}
+
+.First-navbar-content{
+    margin-inline: 10%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+.First-navbar-logo{
+    width: 50%;
+  text-align: right;
+}
+
+.First-navbar-items a{
+    font-size: 20px;
+    color: black;
+}
+.First-navbar-items a:hover{
+    text-decoration: none;
+    color: red;
+
+
+}
+.First-navbar-items{
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    align-items: center;
+    gap: 40px;    
+}
+.logo{
+    width: auto;
+    height: 40px;
+}
+.First-navbar-items .btn-1 {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+
+    text-decoration: none;
+    background-color: #826002;
+    padding: 10px 50px;
+    border-radius: 40px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.First-navbar-items .btn-1:hover{
+    color: rgb(0, 0, 0);
+
+    background-color: #82600270;
+
+}
+
+.First-navbar-items .btn-2 {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    text-decoration: none;
+    background-color: #82600270;
+    padding: 10px 50px;
+    border-radius: 40px;
+    border: 1px solid rgb(255, 255, 255);
+}
+.First-navbar-items .btn-2:hover {
+    color: rgb(255, 255, 255);
+   
+    
+    background-color: #826002;
+
+}
+
+.First-navbar-items .btn-logout {
+    
+
+}

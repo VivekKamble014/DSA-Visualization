@@ -1,0 +1,50 @@
+.sidebar {
+    width: 30%;
+    background-color: #f8f8f8;
+    padding: 15px;
+    box-sizing: border-box;
+    border-right: 2px solid #ddd;
+    height: 100vh; /* Full height of the viewport */
+    overflow-y: auto; /* Scroll if content exceeds viewport height */
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar > ul > li {
+    font-weight: bold;
+    padding: 8px 0;
+    position: relative;
+  }
+  
+  .sidebar .dropdown-content {
+    display: block; /* Always show the dropdown content */
+    margin-left: 20px;
+  }
+  
+  .sidebar .dropdown-content ul {
+    list-style-type: none; /* Remove bullet points from nested lists */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sidebar .dropdown-content li {
+    padding: 4px 0;
+  }
+  
+  .sidebar .dropdown-content ul ul {
+    margin-left: 20px;
+  }
+  
+  .sidebar li::before {
+    content: '\25BC'; /* Unicode character for the dropdown arrow */
+    font-size: 0.8em;
+    margin-right: 10px;
+    position: absolute;
+    left: -20px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+  }

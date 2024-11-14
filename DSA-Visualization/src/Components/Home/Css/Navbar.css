@@ -1,0 +1,166 @@
+.Second-navbar {
+    max-width: 100%;
+    background-color: #e1a500;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure the navbar stays on top of other content */
+}
+
+.Second-navbar-contant {
+    font-size: 20px;
+    font-weight: 500;
+    margin-inline: 10%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    opacity: 100%;
+}
+
+
+.Second-navbar-heading a {
+    color: black;
+    text-decoration: none;
+}
+
+.Second-navbar-heading a:hover {
+    text-decoration: none;
+
+}
+
+.Second-navbar-contant-menu {
+    display: flex;
+    text-align: center;
+    gap: 4rem;
+    color: black;
+    opacity: 100%;
+}
+
+.Second-navbar-contant-menu a {
+    color: black;
+    text-decoration: none;
+}
+.Second-navbar-contant-menu a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.Second-navbar-contant-menu a {
+    text-decoration: none;
+}
+.Second-navbar-contant-menu a:hover {
+    text-decoration: none;
+}
+
+
+.First-navbar-items {
+    display: flex;
+    gap: 1rem;
+}
+
+.First-navbar-items .btn {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #826002;
+    padding: 10px 20px;
+    border-radius: 30%;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.First-navbar-items.btn:hover {
+    background-color: #d4d4d4;
+}
+
+/* dropdoen */
+
+/* Navbar.css */
+
+
+.Second-navbar-contant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Second-navbar-heading a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.Second-navbar-contant-menu {
+    display: flex;
+    align-items: center;
+}
+
+.Second-navbar-contant-menu a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    width: 100%;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #e1a50095;
+    width: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Search feature */
+
+
+.search-bar {
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+.search-results {
+    position: absolute; /* Position the results below the search bar */
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    max-height: 200px; /* Limit height */
+    overflow-y: auto; /* Scroll if too many results */
+    width: 200px; /* Set width to match the search bar */
+    padding: 0; /* Remove default padding */
+    list-style: none; /* Remove default list styles */
+}
+
+.search-results a {
+    display: block; /* Each result in a block, making it occupy its own line */
+    padding: 8px; /* Add padding for better click area */
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Change text color */
+}
+
+.search-results a:hover {
+    background-color: #e1a5006d; /* Highlight on hover */
+    text-decoration: none;
+}
+
