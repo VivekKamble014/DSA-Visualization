@@ -1,7 +1,7 @@
 // Navbar.jsx
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Navigation.css'; // Import the CSS file for navbar styling
+import '../CSS/Navigation.css'; // Import the CSS file for navbar styling
 import logo from '../Images/logo.png'; // Ensure the correct path to your logo image
 import { RiAccountCircleLine } from "react-icons/ri";
 import { FiLogOut } from "react-icons/fi";

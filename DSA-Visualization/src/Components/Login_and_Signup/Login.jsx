@@ -1,11 +1,11 @@
 // Login.jsx
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate for routing
-import './Login.css'; // Import the new CSS file
+import '../CSS/Login.css'; // Import the new CSS file
 import axios from 'axios';
 import { BiSolidHide } from "react-icons/bi";
 import { BiShow } from "react-icons/bi";
-import Navigation from '../User_Dashboard/Navigation';
+import Navigation from '../Navigation/Navigation';
 
 export default function Login() {
     const [email, setEmail] = useState('');

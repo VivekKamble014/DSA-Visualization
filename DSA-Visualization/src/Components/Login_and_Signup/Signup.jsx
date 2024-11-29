@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom'; // Import Link
-import './Signup.css';
+import '../CSS/Signup.css';
 import { BiSolidHide } from "react-icons/bi";
 import { BiShow } from "react-icons/bi";
 

@@ -3,7 +3,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
-import './Css/Home.css';
+import '../CSS/Home.css';
 import arrayImage from './Images/array.png';
 import searchingImage from './Images/ARRAY.jpg'; // Import actual images
 import linkedListImage from './Images/ARRAY.jpg';

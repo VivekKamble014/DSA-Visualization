@@ -1,54 +1,51 @@
 import React from 'react';
-import './Sidebar.css';
+import { NavLink } from 'react-router-dom';
+import '../CSS/Sidebar.css';
+
 
 export default function Sidebar() {
   return (
     <div className="sidebar">
       <ul>
         <li>
-         <b>
-
-          <a href="#">Data Structures</a>
-         </b>
+          <b>
+            <NavLink to="/datastructure" activeClassName="active">Data Structures</NavLink>
+          </b>
           <ul>
             <li>
-            <b>
-
-              <a href="#">Primitive Data Type</a>
-            </b>
+              <b>
+                <NavLink to="/PrimitiveDataType" activeClassName="active">Primitive Data Type</NavLink>
+              </b>
               <ul>
-                <li><a href="#">Integer</a></li>
-                <li><a href="#">Float</a></li>
-                <li><a href="#">Character</a></li>
-                <li><a href="#">Boolean</a></li>
+                <li><NavLink to="/Integer" activeClassName="active">Integer</NavLink></li>
+                <li><NavLink to="/Float" activeClassName="active">Float</NavLink></li>
+                <li><NavLink to="/Character" activeClassName="active">Character</NavLink></li>
+                <li><NavLink to="/Boolean" activeClassName="active">Boolean</NavLink></li>
               </ul>
             </li>
             <li>
-            <b>
-              <a href="#">NonPrimitive Data Type</a>
-
-            </b>
+              <b>
+                <NavLink to="/NonPrimitiveDataType" activeClassName="active">NonPrimitive Data Type</NavLink>
+              </b>
               <ul>
                 <li>
-                <b>
-
-                  <a href="#">Linear Data</a>
-                </b>
+                  <b>
+                    <NavLink to="/LinearDataType" activeClassName="active">Linear Data Type</NavLink>
+                  </b>
                   <ul>
-                    <li><a href="#">Array</a></li>
-                    <li><a href="#">Stack</a></li>
-                    <li><a href="#">Queue</a></li>
-                    <li><a href="#">Linked List</a></li>
+                    <li><NavLink to="/Array" activeClassName="active">Array</NavLink></li>
+                    <li><NavLink to="/Stack" activeClassName="active">Stack</NavLink></li>
+                    <li><NavLink to="/Queue" activeClassName="active">Queue</NavLink></li>
+                    <li><NavLink to="/LinkedList" activeClassName="active">Linked List</NavLink></li>
                   </ul>
                 </li>
                 <li>
-                <b>
-
-                  <a href="#">Non-linear Data</a>
-                </b>
+                  <b>
+                    <NavLink to="/NonLinearDatatype" activeClassName="active">Non-linear Data Type</NavLink>
+                  </b>
                   <ul>
-                    <li><a href="#">Tree</a></li>
-                    <li><a href="#">Graph</a></li>
+                    <li><NavLink to="/Tree" activeClassName="active">Tree</NavLink></li>
+                    <li><NavLink to="/Graph" activeClassName="active">Graph</NavLink></li>
                   </ul>
                 </li>
               </ul>
@@ -56,32 +53,29 @@ export default function Sidebar() {
           </ul>
         </li>
         <li>
-        <b>
-
-          <a href="#">Algorithms</a>
-        </b>
+          <b>
+            <NavLink to="#" activeClassName="active">Algorithms</NavLink>
+          </b>
           <ul>
             <li>
-            <b>
-
-              <a href="#">Sorting</a>
-            </b>
+              <b>
+                <NavLink to="#" activeClassName="active">Sorting</NavLink>
+              </b>
               <ul>
-                <li><a href="#">Bubble Sort</a></li>
-                <li><a href="#">Merge Sort</a></li>
-                <li><a href="#">Quick Sort</a></li>
-                <li><a href="#">Selection Sort</a></li>
-                <li><a href="#">Insertion Sort</a></li>
+                <li><NavLink to="#" activeClassName="active">Bubble Sort</NavLink></li>
+                <li><NavLink to="#" activeClassName="active">Merge Sort</NavLink></li>
+                <li><NavLink to="#" activeClassName="active">Quick Sort</NavLink></li>
+                <li><NavLink to="#" activeClassName="active">Selection Sort</NavLink></li>
+                <li><NavLink to="#" activeClassName="active">Insertion Sort</NavLink></li>
               </ul>
             </li>
             <li>
-            <b>
-
-              <a href="#">Searching</a>
-            </b>
+              <b>
+                <NavLink to="#" activeClassName="active">Searching</NavLink>
+              </b>
               <ul>
-                <li><a href="#">Linear Search</a></li>
-                <li><a href="#">Binary Search</a></li>
+                <li><NavLink to="#" activeClassName="active">Linear Search</NavLink></li>
+                <li><NavLink to="#" activeClassName="active">Binary Search</NavLink></li>
               </ul>
             </li>
           </ul>

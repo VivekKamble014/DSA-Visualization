@@ -1,0 +1,52 @@
+/* CSS for DataStructure Page */
+
+.right-side{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navigation-buttons {
+    width: 90%;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .previous-button,
+  .next-button {
+    background-color: #BD921B;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.383);
+    border: 1px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .previous-button:hover,
+  .next-button:hover {
+    background-color: #0056b3;
+  }
+
+
+  p{
+    font-size: 20px;
+  }
+  ul li{
+    font-size: 18px;
+  }
+
+
+  /* CSS For Primitive Data Types page */
+
+  .DataStructureImage{
+    width: 90%;
+    margin-top: 30px;
+    margin-left: 20px;
+
+  }
+
+  
