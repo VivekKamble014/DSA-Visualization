@@ -1,11 +1,49 @@
 .dashboard {
-    height: 100vh;
+    height: 85vh;
     width: 100%;
     display: flex; /* Use flexbox for layout */
   }
   
   .right-side {
-    width: 70%;
+    width: 80%;
     padding: 15px; /* Optional: Add padding */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    overflow: scroll;
+  }
+  .dashboard-containt {
+    margin-top: 90px;
+    display: flex;
+    gap: 20rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .dashboard-containt img{
+    
+    height: 200px;
+    border-radius: 75%;
+    filter: drop-shadow(1px 1px 5px black);
+  }
+  .dashboard-containt h4{
+    text-decoration: none;
+    color: #333;
+  }
+  .dashboard-containt a:hover{
+    text-decoration: none;
+
+}
+
+  .data-structure {
+    justify-content: center;
+    text-align: center;
+  }
+  .algorithm{
+    justify-content: center;
+    text-align: center;
+  }
+  .right-side h1{
+    text-align: center;
+    margin-block: 40px;
+    font-size: 55px;
+    font-weight: 500;
   }

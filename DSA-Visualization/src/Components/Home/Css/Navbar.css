@@ -138,6 +138,8 @@
     margin-left: 10px;
     border: 1px solid #ccc;
     border-radius: 25px;
+    width: 400px;
+    text-align: center;
 }
 
 .search-results {
