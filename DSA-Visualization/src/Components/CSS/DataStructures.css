@@ -29,6 +29,7 @@
   .previous-button:hover,
   .next-button:hover {
     background-color: #0056b3;
+    color: white;
   }
 
 
@@ -49,4 +50,24 @@
 
   }
 
+  /* Css for Images in Array, LL, Queue, Stack */
+ .right-side .image_array{
+  margin-left: 300px;
+  height: 200px;
   
+    
+  }
+  .right-side .image_stack{
+    margin-left: 400px;
+    height: 500px;
+    
+      
+    }
+    .right-side .image_queue{
+      margin-left: 200px;
+      height: 300px;
+    }
+    .right-side .image_ll{
+      margin-left: 300px;
+      height: 600px;
+    }

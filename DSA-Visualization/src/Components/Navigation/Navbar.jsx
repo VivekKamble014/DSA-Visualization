@@ -15,12 +15,12 @@ export default function Navbar() {
     };
 
     const dataStructureItems = [
-        { name: 'Array', link: '/data-structure/array' },
-        { name: 'Stack', link: '/data-structure/stack' },
-        { name: 'Queue', link: '/data-structure/queue' },
-        { name: 'Linked List', link: '/data-structure/linked-list' },
-        { name: 'Tree', link: '/data-structure/tree' },
-        { name: 'Graph', link: '/data-structure/graph' }
+        { name: 'Array', link: '/Array' },
+        { name: 'Stack', link: '/Stack' },
+        { name: 'Queue', link: '/Queue' },
+        { name: 'Linked List', link: '/LinkedList' },
+        { name: 'Tree', link: '/Tree' },
+        { name: 'Graph', link: '/Graph' }
     ];
 
     const algorithmItems = [
