@@ -1,0 +1,125 @@
+.Queue-Implement {
+    margin-top: 100px;
+    height: 500px;
+  }
+  
+  .queue-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .queue-pipe {
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 2px solid #000;
+    border-left: 0;
+    border-right: 0;
+    width: 70%;
+    height: 150px;
+    overflow-x: auto; /* Allow horizontal scrolling if queue is too long */
+  }
+  
+  .queue-element {
+    font-size: 25px;
+    background-color: #c4f3b1;
+    border: 1px solid #000000;
+    width: 100px;
+    height: 90px;
+    padding: 10px;
+    margin: 9px;
+    text-align: center;
+    position: relative;
+    flex-shrink: 0; /* Prevent elements from shrinking */
+  }
+  
+  .queue-element.enqueuing {
+    animation: enqueue 0.5s ease-out;
+  }
+  
+  @keyframes enqueue {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .front-label, .rear-label {
+    margin-left: 10px;
+    font-size: 20px;
+    position: absolute;
+    top: -30px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .front-label {
+    color: red;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .rear-label {
+    right: 50%;
+    transform: translateX(50%);
+  }
+  
+  .queue-button {
+    width: auto;
+    background-color: #c69f35;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .queue-button:hover {
+    background-color: #806722;
+  }
+  
+  .navigation-buttons {
+    margin-top: 20px;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.702);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    max-width: 600px;
+    background: #fbdb85;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .modal-button {
+    width: auto;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .modal-button:hover {
+    background-color: #007b9e;
+  }
+  
+  .navigation-buttons {
+    margin-top: 20px;
+  }

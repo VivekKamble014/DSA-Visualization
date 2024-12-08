@@ -1,0 +1,227 @@
+/* src/CSS/Array.css */
+
+
+  .image_array {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  .create-array {
+    margin-top: 20px;
+   
+    display: flex;
+    justify-content: center;
+  }
+  
+  .array-buttons {
+    background-color: #bea04d;
+    width: 400px;
+    
+   
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .array-buttons{
+    font-size: 20px;
+    color: black;
+  }
+  .array-buttons:hover,
+  .array-buttons.active {
+    background-color: #fab804;
+   
+  }
+  
+  .array-content {
+    margin-top: 20px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+ 
+ 
+  
+
+  /* Array.css */
+.Modal {
+    position: fixed;
+    
+    max-width: 800px;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: #decda0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.807);
+    z-index: 1000;
+  }
+  
+  .Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(17, 17, 17, 0.768);
+    z-index: 999;
+  }
+/* In your Array.css file */
+.array-input{
+    margin-block: 20px;
+}
+.array-input input{
+    width: 100%; 
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 22px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+ 
+  .enter-array-buttons{
+    width: 100%;
+    margin-left: 150px;
+    margin-block: 20px;
+    border-radius: 4px;
+    background-color: #c69f35(7, 169, 250);
+    border: 2px solid black ;
+    color: black;
+    width: 150px;
+
+  }
+  /* In your Array.css file */
+
+/* Container for the pairs */
+.array-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping if there's not enough space */
+    gap: 20px; /* Space between the pairs */
+    margin-top: 20px;
+  }
+  
+  /* Box for each index-value pair */
+  .array-pair {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #000000;
+    width: 120px; 
+    margin-bottom: 30px;
+  }
+  
+
+.array-elements {
+    margin-top: 20px;
+    padding: 10px;
+  }
+  .array-ele{
+    display: flex;
+    padding: 50px;
+
+  }
+  /* Container for labels and pairs */
+  .array-container {
+    display: flex;
+    flex-direction: row;
+    max-height: 300px; /* Limit the container height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    border-radius: 8px;
+  }
+  
+  /* Labels for Index and Value */
+  .array-labels {
+    font-size: 26px;
+    font-weight: bold;
+    padding: 20px;
+  }
+  
+  /* Styling for each index-value pair */
+  .array-pairs {
+
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+  .array-pairs .array-pair .index-val{
+    color: rgb(191, 34, 34);
+    font-weight: 700;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+
+  .array-pairs .array-pair .value-val{
+    padding: 10px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    background-color: rgb(219, 219, 219);
+  }
+
+
+  /* Style for each pair of index and value */
+  .array-pair {
+  
+    width: auto;
+
+    width: 50px;
+    display: flex;
+    font-size: 20px;
+    border: 1px solid #000000;
+  }
+  
+
+/* Buttons  */
+  .insert-delete-buttons {
+    display: flex;
+    justify-content: space-around; /* Space the buttons evenly */
+    gap: 10px; /* Add some space between buttons */
+    margin-top: 20px; /* Adjust the spacing above the buttons */
+  }
+  
+  .array-buttons {
+    padding: 10px 20px;
+    border: none;
+    color: rgb(0, 0, 0);
+
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+ 
+
+
+  /* For Array Matrix */
+
+  .matrix-table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .matrix-table th,
+  .matrix-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .matrix-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .array-elements .array-ele {
+    margin-top: 20px;
+  }

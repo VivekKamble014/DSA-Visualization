@@ -1,0 +1,131 @@
+.Stack-implementation {
+  margin-top: 100px;
+    height: 500px;
+  }
+  .input-section input{
+    width: 400px;
+    font-size: 20px;
+    padding: 10px;
+  }
+  .stack-container {
+    
+    display: flex;
+    flex-direction: column; /* Stack values from top to bottom */
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    margin-top: 150px;
+    padding-right: 50px; /* Adjusted padding to make room for the 'Top' label */
+  }
+  
+  .stack-box {
+    border: 2px solid #000;
+    border-top: 0;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .stack-element {
+    font-weight: 600;
+    background-color: #fac3c3;
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    transform-origin: top; /* Ensure animation originates from the top */
+    opacity: 1;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Smooth animation */
+    position: relative; /* Position relative for the top label */
+  }
+  
+  .stack-element.pushing {
+    transform: scaleY(0); /* Animate the push */
+    opacity: 0;
+  }
+  .stack-box p{
+    background-color: rgb(120, 252, 252);
+  }
+  .top-label {
+    position: absolute;
+    right: -70px; /* Positioning label on the right side */
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #800c0c;
+  }
+  
+  .bottom-label {
+    
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .stack-button {
+    width: auto;
+    background-color: #c69f35;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .stack-button-pop {
+    width: auto;
+    color: #000;
+    margin: 20px;
+    margin-left: 200px;
+  }
+  .stack-button:hover {
+    background-color: #67531b;
+  }
+  
+
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    
+    background-color: rgba(0, 0, 0, 0.649);
+  }
+  
+  .modal-content {
+    background-color: #e6d4a5;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #000000;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .close {
+    width: 100%;
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .modal-content input{
+    padding: 6px;
+    font-size: 20px;
+    margin-block: 20px;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+.stack-button{
+  margin-left: 10px;
+ 
+}
