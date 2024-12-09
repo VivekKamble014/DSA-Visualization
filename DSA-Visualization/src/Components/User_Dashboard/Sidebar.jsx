@@ -54,28 +54,28 @@ export default function Sidebar() {
         </li>
         <li>
           <b>
-            <NavLink to="#" activeClassName="active">Algorithms</NavLink>
+            <NavLink to="/Algorithms" activeClassName="active">Algorithms</NavLink>
           </b>
           <ul>
             <li>
               <b>
-                <NavLink to="#" activeClassName="active">Sorting</NavLink>
+                <NavLink to="/Sorting" activeClassName="active">Sorting</NavLink>
               </b>
               <ul>
-                <li><NavLink to="#" activeClassName="active">Bubble Sort</NavLink></li>
-                <li><NavLink to="#" activeClassName="active">Merge Sort</NavLink></li>
-                <li><NavLink to="#" activeClassName="active">Quick Sort</NavLink></li>
-                <li><NavLink to="#" activeClassName="active">Selection Sort</NavLink></li>
-                <li><NavLink to="#" activeClassName="active">Insertion Sort</NavLink></li>
+                <li><NavLink to="/BubbleSort" activeClassName="active">Bubble Sort</NavLink></li>
+                <li><NavLink to="/MergeSort" activeClassName="active">Merge Sort</NavLink></li>
+                <li><NavLink to="/QuickSort" activeClassName="active">Quick Sort</NavLink></li>
+                <li><NavLink to="/SelectionSort" activeClassName="active">Selection Sort</NavLink></li>
+                <li><NavLink to="/InsertionSort" activeClassName="active">Insertion Sort</NavLink></li>
               </ul>
             </li>
             <li>
               <b>
-                <NavLink to="#" activeClassName="active">Searching</NavLink>
+                <NavLink to="/Searching" activeClassName="active">Searching</NavLink>
               </b>
               <ul>
-                <li><NavLink to="#" activeClassName="active">Linear Search</NavLink></li>
-                <li><NavLink to="#" activeClassName="active">Binary Search</NavLink></li>
+                <li><NavLink to="/LinearSearch" activeClassName="active">Linear Search</NavLink></li>
+                <li><NavLink to="/BinarySearch" activeClassName="active">Binary Search</NavLink></li>
               </ul>
             </li>
           </ul>

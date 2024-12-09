@@ -1,0 +1,94 @@
+.QuizNavbar{
+    display: flex;
+  justify-content: space-between; /* Ensures the divs are at opposite corners */
+  align-items: center; /* Vertically centers the items if needed */
+    padding-inline: 10%;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(132, 196, 242);
+}
+.QuizNavbar h4{
+    font-size: 24px;
+    font-weight: 500;
+}
+.left-corner {
+    /* Styles for the left corner div */
+  }
+  
+  .right-corner {
+    /* Styles for the right corner div */
+  }
+
+
+
+  /* Styles for the cards container */
+.cards-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: space-between; /* Distributes the space evenly between cards */
+    gap: 20px; /* Adds space between cards */
+    margin: 30px;
+    
+    padding: 20px; /* Adds padding around the cards container */
+  }
+  
+  /* Styles for individual cards */
+  .card {
+    flex: 1 1 calc(25% - 20px); /* Ensures 4 cards in a row with space between them */
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #ccc; /* Adds a border to the card */
+    border-radius: 8px; /* Rounds the corners of the card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a shadow to the card */
+    text-align: center; /* Centers the text within the card */
+    height: 400px;
+    margin-block: 30px;
+  }
+  
+  .card img {
+    max-width: 100%; /* Ensures the image fits within the card */
+    height: auto;
+    border-radius: 8px; /* Rounds the corners of the image */
+  }
+  
+  .card h3 {
+    margin: 10px 0; /* Adds margin around the heading */
+  }
+  
+  .card p {
+    margin: 10px 0; /* Adds margin around the text */
+  }
+  
+  .card button {
+    padding: 10px 20px; /* Adds padding to the button */
+    background-color: #007bff; /* Sets the background color of the button */
+    color: white; /* Sets the text color of the button */
+    border: none; /* Removes the border from the button */
+    border-radius: 5px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+  }
+  
+  .card button:hover {
+    background-color: #0056b3; /* Changes the background color on hover */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1200px) {
+    .card {
+      flex: 1 1 calc(33.333% - 20px); /* Ensures 3 cards in a row */
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .card {
+      flex: 1 1 calc(50% - 20px); /* Ensures 2 cards in a row */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .card {
+      flex: 1 1 100%; /* Ensures 1 card in a row */
+    }
+  }

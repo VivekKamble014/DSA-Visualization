@@ -1,0 +1,71 @@
+/* AdminRegister.css */
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f7f6;
+  }
+  
+  .register-form {
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .register-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .register-form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .register-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .register-form button:hover {
+    background-color: #218838;
+  }
+  
+  .register-form p {
+    margin: 10px 0;
+  }
+  
+  .register-form .error-message {
+    color: red;
+  }
+  
+  .register-form .success-message {
+    color: green;
+  }
+  
+  .register-form .login-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .register-form .login-link:hover {
+    text-decoration: underline;
+  }

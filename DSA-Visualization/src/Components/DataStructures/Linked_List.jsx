@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Navigation from '../Navigation/Navigation';
+import { Link } from 'react-router-dom';
+
 import Navbar from '../Navigation/Navbar';
 import Sidebar from '../User_Dashboard/Sidebar';
 import LL_Image from '../Images/Linked_List_Image.png';
@@ -42,7 +44,11 @@ export default function Linked_List() {
           setSinglyList(values);
           break;
         case 'Doubly Linked List':
-          const doublyLinkedList = values.map(value => ({ prev: null, data: value, next: null }));
+          const doublyLinkedList = values.map((value, index) => ({
+            prev: index === 0 ? null : { data: values[index - 1] },
+            data: value,
+            next: index === values.length - 1 ? null : { data: values[index + 1] },
+          }));
           setDoublyList(doublyLinkedList);
           break;
         case 'Circular Linked List':
@@ -65,16 +71,30 @@ export default function Linked_List() {
   const insertNode = (position, value) => {
     let list = [...getCurrentList()];
 
+    const newNode = { data: value, next: null };
+
     switch (position) {
       case 'start':
-        list.unshift(value);
+        if (list.length > 0) {
+          newNode.next = list[0]; // Point new node to the first node
+        } else {
+          newNode.next = newNode; // If empty, point to itself
+        }
+        list.unshift(newNode); // Add the new node to the start
         break;
       case 'end':
-        list.push(value);
+        if (list.length > 0) {
+          list[list.length - 1].next = newNode; // Point the last node to the new node
+          newNode.next = list[0]; // Make the list circular by pointing last node to first
+        } else {
+          newNode.next = newNode; // If it's the only node, point to itself
+        }
+        list.push(newNode); // Add the new node to the end
         break;
       case 'random':
         const randomIndex = Math.floor(Math.random() * list.length);
-        list.splice(randomIndex, 0, value);
+        newNode.next = list[randomIndex].next;
+        list[randomIndex].next = newNode;
         break;
       default:
         break;
@@ -89,14 +109,34 @@ export default function Linked_List() {
 
     switch (position) {
       case 'start':
-        list.shift();
+        if (list.length > 0) {
+          if (list.length === 1) {
+            list = []; // If only one node, remove it entirely
+          } else {
+            list[list.length - 1].next = list[0].next; // Update the last node's next to point to the new first node
+            list.shift(); // Remove the first node
+          }
+        }
         break;
       case 'end':
-        list.pop();
+        if (list.length > 0) {
+          const secondLastNode = list[list.length - 2];
+          secondLastNode.next = list[0]; // Update the second last node's next to point to the first node
+          list.pop(); // Remove the last node
+        }
         break;
       case 'position':
         const position = prompt("Enter the position to delete (0-based index):");
-        list.splice(position, 1);
+        if (position >= 0 && position < list.length) {
+          if (list.length > 1) {
+            const previousNode = list[position - 1];
+            const nextNode = list[position + 1];
+            previousNode.next = nextNode;
+            list.splice(position, 1); // Remove the node at the specified position
+          } else {
+            list = []; // Remove the node entirely if it’s the only node
+          }
+        }
         break;
       default:
         break;
@@ -112,16 +152,6 @@ export default function Linked_List() {
     updateList(list);
   };
 
-  // Update a node by its value
-  const updateNode = (oldValue, newValue) => {
-    let list = [...getCurrentList()];
-    const index = list.indexOf(oldValue);
-    if (index !== -1) {
-      list[index] = newValue;
-      updateList(list);
-    }
-  };
-
   // Function to update the linked list
   const updateList = (list) => {
     switch (selectedList) {
@@ -129,59 +159,14 @@ export default function Linked_List() {
         setSinglyList(list);
         break;
       case 'Doubly Linked List':
-        const doublyLinkedList = list.map(value => ({ prev: null, data: value, next: null }));
-        setDoublyList(doublyLinkedList);
+        setDoublyList(list);
         break;
       case 'Circular Linked List':
-        const circularLinkedList = list.map(value => ({ data: value, next: null }));
-        if (circularLinkedList.length > 1) {
-          circularLinkedList[circularLinkedList.length - 1].next = circularLinkedList[0];
-        }
-        setCircularList(circularLinkedList);
+        setCircularList(list);
         break;
       default:
         break;
     }
-  };
-
-  // Function to display nodes with links and pointers
-  const displayNodes = () => {
-    let listToDisplay = [];
-    switch (selectedList) {
-      case 'Singly Linked List':
-        listToDisplay = singlyList;
-        break;
-      case 'Doubly Linked List':
-        listToDisplay = doublyList;
-        break;
-      case 'Circular Linked List':
-        listToDisplay = circularList;
-        break;
-      default:
-        break;
-    }
-
-    return listToDisplay.map((node, index) => {
-      return (
-        <div key={index} className="node">
-          <div className="node-box">
-            <div className="value">{node.data || node}</div>
-            {selectedList === 'Singly Linked List' && (
-              <div className="pointer">{index < singlyList.length - 1 ? "→" : "null"}</div>
-            )}
-            {selectedList === 'Doubly Linked List' && (
-              <>
-                <div className="pointer">{node.prev ? "←" : "null"}</div>
-                <div className="pointer">{node.next ? "→" : "null"}</div>
-              </>
-            )}
-          </div>
-          {(index < listToDisplay.length - 1 || selectedList === 'Circular Linked List') && (
-            <div className="arrow">→</div>
-          )}
-        </div>
-      );
-    });
   };
 
   // Function to get the current list (for navigation)
@@ -218,51 +203,49 @@ export default function Linked_List() {
 
           <div>
             <h3>Choose Linked List Type</h3>
-            <button onClick={() => handleListSelection('Singly Linked List')} className="linked-list-button">Singly Linked List</button>
-            <button onClick={() => handleListSelection('Doubly Linked List')} className="linked-list-button">Doubly Linked List</button>
-            <button onClick={() => handleListSelection('Circular Linked List')} className="linked-list-button">Circular Linked List</button>
+            <button onClick={() => handleListSelection('Singly Linked List')} className="button">Singly Linked List</button>
+            <button onClick={() => handleListSelection('Doubly Linked List')} className="button">Doubly Linked List</button>
+            <button onClick={() => handleListSelection('Circular Linked List')} className="button">Circular Linked List</button>
           </div>
 
+          {selectedList && (
+            <div>
+              <h3>Enter Node Values (Space separated)</h3>
+              <input
+                type="text"
+                value={newNodes}
+                onChange={handleNodeValuesChange}
+                placeholder="Enter node values"
+              />
+              <button onClick={createLinkedList} className="button">Create Linked List</button>
+            </div>
+          )}
+
           <div>
-            <h3>Selected Linked List Type: {selectedList}</h3>
-            {selectedList && <p>You have selected {selectedList}.</p>}
-
-            {selectedList && (
-              <div>
-                <h4>Current Nodes:</h4>
-                <div className="linked-list-visualization">{displayNodes()}</div>
-
-                <button onClick={openPopup}>Create Linked List</button>
-
-                {isPopupOpen && (
-                  <div className="popup">
-                    <div className="popup-content">
-                      <h3>Enter Node Values (space-separated)</h3>
-                      <textarea
-                        value={newNodes}
-                        onChange={handleNodeValuesChange}
-                        placeholder="Enter node values separated by space"
-                      />
-                      <button onClick={createLinkedList}>Create Linked List</button>
-                      <button onClick={closePopup}>Cancel</button>
-                    </div>
-                  </div>
-                )}
-
+            <h3>Current {selectedList} Nodes</h3>
+            {getCurrentList().length > 0 && (
+              <>
+                <div>{displayNodes()}</div>
                 <div>
-                  <button onClick={() => insertNode('start', prompt("Enter value to insert at the start"))}>Insert at Start</button>
-                  <button onClick={() => insertNode('end', prompt("Enter value to insert at the end"))}>Insert at End</button>
-                  <button onClick={() => insertNode('random', prompt("Enter value to insert at random position"))}>Insert Random</button>
-
-                  <button onClick={() => deleteNode('start')}>Delete from Start</button>
-                  <button onClick={() => deleteNode('end')}>Delete from End</button>
-                  <button onClick={() => deleteNode('position')}>Delete by Position</button>
-
-                  <button onClick={reverseList}>Reverse List</button>
-                  <button onClick={() => updateNode(prompt("Enter value to update"), prompt("Enter new value"))}>Update by Value</button>
+                  <button onClick={() => insertNode('start', prompt("Enter value to insert at start:"))} className="button">Insert at Start</button>
+                  <button onClick={() => insertNode('end', prompt("Enter value to insert at end:"))} className="button">Insert at End</button>
+                  <button onClick={() => insertNode('random', prompt("Enter value to insert at random position:"))} className="button">Insert at Random Position</button>
+                  <button onClick={() => deleteNode('start')} className="button">Delete from Start</button>
+                  <button onClick={() => deleteNode('end')} className="button">Delete from End</button>
+                  <button onClick={() => deleteNode('position')} className="button">Delete from Position</button>
+                  <button onClick={reverseList} className="button">Reverse List</button>
                 </div>
-              </div>
+              </>
             )}
+          </div>
+
+          <div className="navigation-buttons">
+            <Link to="/Queue">
+              <button className="previous-button">Previous</button>
+            </Link>
+            <Link to="/NonLinearDatatype">
+              <button className="next-button">Next</button>
+            </Link>
           </div>
         </div>
       </div>

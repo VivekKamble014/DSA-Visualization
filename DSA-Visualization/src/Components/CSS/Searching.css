@@ -1,0 +1,113 @@
+
+   .input-field {
+    padding: 8px;
+    margin: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+  }
+.LinearSearch-Visu, .BinarySearch-Visu{
+    height: auto;
+    width: 90%;
+    margin-left: 5%;
+    padding: 50px;
+    background-color: rgb(248, 235, 223);
+    border: 2px solid black;
+    border-radius: 5px 10px 5px 20px;
+}  
+  button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Styling for the bar container */
+  .bar-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+  }
+  
+  .bar {
+    width: 50px;
+    background-color: #3498db;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+  }
+  
+  .bar-value {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Highlighting the bar */
+  .bar-wrapper.highlight .bar {
+    background-color: #ee3d29;
+    transform: scale(1.1); /* Slightly enlarge the bar */
+  }
+  
+  /* Found element bar */
+  .bar-wrapper.found .bar {
+    background-color: #2ecc71; /* Green when found */
+    transform: scale(1.2); /* Slightly enlarge the bar when found */
+  }
+  
+  /* Styling for the popup */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .popup h4 {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .popup button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popup button:hover {
+    background-color: #2980b9;
+  }

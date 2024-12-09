@@ -21,7 +21,19 @@ import Tree from './Components/DataStructures/Tree';
 import LinkedList from './Components/DataStructures/Linked_List';
 import Boolean from './Components/DataStructures/Boolean';
 
+import BinarySearch from './Components/Algorithms/Binary_Search';
+import BubbleSort from './Components/Algorithms/Bubble_Sort';
+import InsertionSort from './Components/Algorithms/Insertion_Sort';
+import LinearSearch from './Components/Algorithms/Linear_search';
+import MergeSort from './Components/Algorithms/Merge_sort';
+import QuickSort from './Components/Algorithms/Quick_Sort';
+import Searching from './Components/Algorithms/Searching';
+import SelectionSort from './Components/Algorithms/Selection_Sort';
+import Sorting from './Components/Algorithms/Sorting';
 
+
+
+import QuizDashboard from './Components/Quiz/QuizDashboard';
 
 function App() {
   return (
@@ -52,7 +64,21 @@ function App() {
         <Route path="/Tree" element={<Tree/>}/>
         <Route path="/LinkedList" element={<LinkedList/>}/>
         <Route path="/Boolean" element={<Boolean/>}/>
-     
+
+      {/* Algorithms */}
+
+        <Route path="/BinarySearch" element={<BinarySearch/>}/>
+        <Route path="/BubbleSort" element={<BubbleSort/>}/>
+        <Route path="/InsertionSort" element={<InsertionSort/>}/>
+        <Route path="/LinearSearch" element={<LinearSearch/>}/>
+        <Route path="/MergeSort" element={<MergeSort/>}/>
+        <Route path="/QuickSort" element={<QuickSort/>}/>
+        <Route path="/Searching" element={<Searching/>}/>
+        <Route path="/SelectionSort" element={<SelectionSort/>}/>
+        <Route path="/Sorting" element={<Sorting/>}/>
+        <Route path="/QuizDashboard" element={<QuizDashboard/>}/>
+        
+
         
       </Routes>
     </Router>
