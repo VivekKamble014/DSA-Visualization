@@ -2,24 +2,9 @@ const express = require('express');
 const router = express.Router();
 const Quiz = require('../models/Quiz'); // Assuming you have a Quiz model
 
-// POST route to save a new quiz
-router.post('/quizzes', async (req, res) => {
-  const { subjectId, quizTime, questions } = req.body;
 
-  try {
-    const newQuiz = new Quiz({
-      subjectId,
-      quizTime,
-      questions,
-    });
 
-    await newQuiz.save();
-    res.status(201).json({ message: 'Quiz saved successfully', quiz: newQuiz });
-  } catch (error) {
-    console.error('Error saving quiz:', error);
-    res.status(500).json({ message: 'Failed to save quiz' });
-  }
-});
+
 // Route to get all quizzes
 router.get('/api/quizzes', async (req, res) => {
     try {
@@ -50,5 +35,25 @@ router.delete('/api/quizzes/:id', async (req, res) => {
       res.status(500).json({ message: 'Failed to delete quiz', error });
     }
   });
+// Route to get a quiz by its ID
+router.get('/api/quizzes/:quizId', async (req, res) => {
+    const { quizId } = req.params;  // Get quizId from URL parameters
+  
+    try {
+      // Find the quiz by its ID, and populate subjectId to get subject details
+      const quiz = await Quiz.findById(quizId).populate('subjectId');
+  
+      if (!quiz) {
+        return res.status(404).json({ message: 'Quiz not found' });
+      }
+  
+      res.json({ quiz });
+    } catch (error) {
+      console.error('Error fetching quiz:', error);
+      res.status(500).json({ message: 'Failed to fetch quiz', error });
+    }
+  });
+
+
   
 module.exports = router;

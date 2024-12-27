@@ -159,7 +159,7 @@ export default function Array() {
           </div>
           <div className="create-array">
             <button className={`array-buttons ${selectedArrayType === '1D' ? 'active' : ''}`} onClick={() => handleArrayTypeChange('1D')}>1D Array</button>
-            <button className={`array-buttons ${selectedArrayType === '2D' ? 'active' : ''}`} onClick={() => handleArrayTypeChange('2D')}>2D Array</button>
+            {/* <button className={`array-buttons ${selectedArrayType === '2D' ? 'active' : ''}`} onClick={() => handleArrayTypeChange('2D')}>2D Array</button> */}
           </div>
 
 

@@ -3,6 +3,8 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const subjectRoutes = require('./routes/subject');
 const quizRoutes = require('./routes/quizzes'); // Adjust path to your routes file
+const User  =require('./routes/UserRoutes');
+const submitQuiz  =require('./routes/quiz');
 
 
 
@@ -23,6 +25,8 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api', subjectRoutes);
 app.use('/api', quizRoutes);
 app.use(quizRoutes); // Register the route
+app.use('/api', User); // Register the route
+app.use('/api', submitQuiz); // Register the route
 
 
 

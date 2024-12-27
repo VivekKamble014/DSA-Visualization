@@ -32,7 +32,7 @@ import Login from './Components/User/Login';
 import RegisterUser from './Components/User/Registration';
 import UserDashboard from './Components/User/UserDashboard';
 import StartQuiz from './Components/User/StartQuiz';
-
+import Dashboard from './Components/User_Dashboard/User_Dashboard'
 
 function App() {
   return (
@@ -42,6 +42,8 @@ function App() {
         {/* Redirect from the root path to /Home */}
         <Route path="/" element={<Navigate to="/Home" />} />
         <Route path="/Home" element={<Home />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+
        
         <Route path="/DataStructure" element={<DataStructures/>}/>
         <Route path="/Algorithms" element={<Algorithms/>}/>
