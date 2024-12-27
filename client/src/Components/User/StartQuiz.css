@@ -1,0 +1,135 @@
+.start-quiz-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .quiz-rules {
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .quiz-rules h2 {
+    color: #333;
+  }
+  
+  .quiz-rules ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .quiz-rules li {
+    margin: 8px 0;
+  }
+  
+  .start-quiz-button,
+  .submit-quiz-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .start-quiz-button:hover,
+  .submit-quiz-button:hover {
+    background-color: #45a049;
+  }
+  
+  .question-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .option-container {
+    margin-top: 10px;
+  }
+  
+  .score-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e0f7fa;
+    border-radius: 5px;
+  }
+
+  .start-quiz-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .quiz-rules {
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .quiz-rules h2 {
+    color: #333;
+  }
+  
+  .quiz-rules ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .quiz-rules li {
+    margin: 8px 0;
+  }
+  
+  .start-quiz-button,
+  .submit-quiz-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .start-quiz-button:hover,
+  .submit-quiz-button:hover {
+    background-color: #45a049;
+  }
+  
+  .question-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .option-container {
+    margin-top: 10px;
+  }
+  
+  .score-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e0f7fa;
+    border-radius: 5px;
+  }
+
+
+  .correct {
+    background-color: #d4edda; /* Light green */
+    border: 1px solid #c3e6cb; /* Green border */
+  }
+  
+  .incorrect {
+    background-color: #f8d7da; /* Light red */
+    border: 1px solid #f5c6cb; /* Red border */
+  }
+  
+  .correct-answer {
+    font-weight: bold;
+    color: #155724; /* Dark green */
+  }

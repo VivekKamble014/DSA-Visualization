@@ -1,0 +1,73 @@
+/* General container for the quiz cards */
+.quiz-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Individual card styling */
+  .quiz-card {
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for cards */
+  .quiz-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Title of the quiz */
+  .quiz-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Description and details (number of questions and time limit) */
+  .quiz-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 8px 0;
+  }
+  
+  /* Styling the delete button */
+  .delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Delete button hover effect */
+  .delete-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Style for the dropdown filter */
+  .subject-dropdown {
+    padding: 10px;
+    font-size: 1rem;
+    margin: 20px 0;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Text for "No quizzes available" */
+  .quiz-cards-container p {
+    font-size: 1.2rem;
+    color: #888;
+  }

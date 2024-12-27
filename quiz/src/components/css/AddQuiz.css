@@ -34,17 +34,4 @@
   }
 
 
-  /* Style for the dropdown menu */
-.subject-dropdown {
-    padding: 10px;
-    font-size: 1rem;
-    margin: 20px 0;
-    width: 200px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
   
-  .subject-dropdown:focus {
-    outline: none;
-    border-color: #007bff;
-  }

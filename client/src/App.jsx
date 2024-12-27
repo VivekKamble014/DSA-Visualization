@@ -29,10 +29,9 @@ import Searching from './Components/Algorithms/Searching';
 import SelectionSort from './Components/Algorithms/Selection_Sort';
 import Sorting from './Components/Algorithms/Sorting';
 import Login from './Components/User/Login';
-import Register from './Components/User/Registration';
+import RegisterUser from './Components/User/Registration';
 import UserDashboard from './Components/User/UserDashboard';
-
-
+import StartQuiz from './Components/User/StartQuiz';
 
 
 function App() {
@@ -75,9 +74,10 @@ function App() {
         <Route path="/SelectionSort" element={<SelectionSort/>}/>
         <Route path="/Sorting" element={<Sorting/>}/>
         <Route path="/Login" element={<Login/>}/>
-        <Route path="/Registration" element={<Register/>}/>
+        <Route path="/RegisterUser" element={<RegisterUser/>}/>
         <Route path="/UserDashboard" element={<UserDashboard/>}/>
-       
+
+        <Route path="/quiz/:quizId" element={<StartQuiz />} /> {/* Correctly set the element */}
 
         
       </Routes>
