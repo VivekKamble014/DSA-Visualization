@@ -44,9 +44,10 @@ export default function Navbar() {
             </>
           ) : (
             <>
+            
               {/* Show these items if the user is not logged in */}
-              <Link to="/login" className="btn-1">Login</Link>
-              <Link to="/signup" className="btn-2">Signup</Link>
+              <Link href="/mernquizapp/client/src/pages/common/Login/index.js" className="btn-1">Login</Link>
+              <Link href="/signup" className="btn-2">Signup</Link>
             </>
           )}
         </div>

@@ -80,6 +80,7 @@ function App() {
         <Route path="/UserDashboard" element={<UserDashboard/>}/>
 
         <Route path="/quiz/:quizId" element={<StartQuiz />} /> {/* Correctly set the element */}
+    
 
         
       </Routes>
